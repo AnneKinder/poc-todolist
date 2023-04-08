@@ -1,9 +1,7 @@
-export type IncomingTask ={
-task: string;
-}
+export type IncomingTask = Omit<TaskFromDb, "id" | "isDone">
 
 export type TaskFromDb={
     id: number, 
     task: string,
-    isDone: boolean;
+    isdone: boolean;
 }
