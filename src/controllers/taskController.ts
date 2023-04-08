@@ -47,8 +47,7 @@ async function deleteTask (req: Request, res: Response, next: NextFunction){
          return res.status(200).send("Task deleted.")
     
       } catch (err) {
-        //next(err)
-        console.log(err)
+        next(err)
       }
 }
 
